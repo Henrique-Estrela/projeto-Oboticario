@@ -1,3 +1,5 @@
+<?php include 'head.php' ?>
+
 <div class="circle"></div>
 
   <form class="form left_hover" id="login1" action="">
@@ -16,3 +18,6 @@
           <button type="submit" class="form__submit">Enviar</button>
       </div>
   </form>
+
+<?php include 'js.php' ?>
+<?php include 'footer.php' ?>

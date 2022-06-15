@@ -5,10 +5,11 @@
     background:#3866f2;
     border-radius:0 0 100%  0;
 }
-
 .form{
+    
     background-color: #fff;
     margin: auto;
+    margin-top: 10%;
     width: 90%;
     max-width: 400px;
     padding: 4.5em 3em;
