@@ -7,5 +7,20 @@
 
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+<script src="//cdn.datatables.net/plug-ins/1.11.5/i18n/pt-BR.json"></script>
+
 <script src="_js/index.js"></script>
 <script src="_js/cpf.js"></script>
+
+
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+      $('#mytable').DataTable({
+        "language": {
+            url: 'https://cdn.datatables.net/plug-ins/1.11.5/i18n/pt-BR.json'
+        }
+      }); 
+  } );

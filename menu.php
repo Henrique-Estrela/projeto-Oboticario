@@ -21,10 +21,10 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Controle de Vendas</a>
+                        <a class="nav-link" href="ControleV.php">Controle de Vendas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Consutar Estoque</a>
+                        <a class="nav-link" href="ConsultarE.php">Consutar Estoque</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Sair</a>
