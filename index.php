@@ -5,7 +5,7 @@
 
   <form class="form left_hover" id="login1">
       <h2 class="form__title">Login</h2>
-      <p class="form__paragraph">Não tem uma conta? <a href="#cadastro" onclick="function att()" class="form__link1" id="login">Entre aqui</a></p>
+      <p class="form__paragraph">Não tem uma conta? <a href="#cadastro" onclick=" mostrar()" class="form__link1" id="login">Entre aqui</a></p>
       <div class="form__container">
           <div class="form__group">
               <input type="num" id="cpf" class="form__input" onblur="validarCPF(this);"  maxlength ="14" placeholder=" " required>
@@ -23,7 +23,7 @@
 
   <form class="form right_hover" id="cadastro1">
       <h2 class="form__title">Cadastro</h2>
-      <p class="form__paragraph">Não tem uma conta? <a href="#" class="form__link1" id="login">Entre aqui</a></p>
+      <p class="form__paragraph">Não tem uma conta? <a href="#login1" onclick=" mostrar1()" class="form__link1" id="login">Entre aqui</a></p>
       <div class="form__container">
           <div class="form__group">
               <input type="text" id="user" class="form__input" placeholder=" ">
