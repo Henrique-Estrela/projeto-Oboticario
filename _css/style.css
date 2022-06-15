@@ -150,3 +150,11 @@ transition:1s;
     color: #fff;
     font-size: 12px;
   }
+
+
+#login1{
+    display:"";
+ }
+#cadastro1{
+    display:none;
+ }
