@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="_images/logo.png" class="logo">
+                <img src="_image/logo.png" width="90rem" class="logo">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -13,18 +13,18 @@
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Secretaria
+                            Cadastros
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="painel.php?r=cadAluno">Cadastrar Alunos</a></li>
-                            <li><a class="dropdown-item" href="#">Cadastrar Prof</a></li>
+                            <li><a class="dropdown-item" href="painel.php?r=cadAluno">Cadastrar Produto</a></li>
+                            <li><a class="dropdown-item" href="#">Cadastrar Funcionario</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Aluno</a>
+                        <a class="nav-link" href="#">Controle de Vendas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Dashs</a>
+                        <a class="nav-link" href="#">Consutar Estoque</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Sair</a>

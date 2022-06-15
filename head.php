@@ -10,6 +10,7 @@
         <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" >
 
+    <link rel="icon" href="_image/logo.png" type="image/png">
     <title>Sistema de gestão</title>
 </head>
 <body>
