@@ -10,6 +10,7 @@
                 $valor = $dados['valor'];
                 $custo = $dados['custo'];
 
+<<<<<<< HEAD
                 if(isset($_POST)){
     
                 if(cadastro_produto($nome)==0){
@@ -64,6 +65,18 @@
                     <?php 
                     }}
             
+=======
+        $nome = $dados['nome'];
+        $dt_Cadastro = $dados['dt_Cadastro'];
+        $fornecedor = $dados['fornecedor'];
+        $codigoBarra = $dados['codigoBarra'];
+        $valor = $dados['valor'];
+        $custo = $dados['custo'];
+        $qntd = $dados['qntd'];
+
+        $sql = "INSERT INTO cad_Produto (nome_produto,fornecedor,valor_venda,custo_produto,data_cadastro,codigo_barra,quantidade) VALUES ('$nome','$fornecedor','$valor','$custo','$dt_Cadastro','$codigoBarra',$qntd)";
+        $query = $mysqli->query($sql);
+>>>>>>> 45a13a492afa5b9dbc1eb827ae68f8ea29aa00ed
 
                 
 

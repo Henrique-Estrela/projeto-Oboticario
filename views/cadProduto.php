@@ -10,7 +10,7 @@
   </div>
   <div class="col-12">
     <label class="form-label">Codigo do Produto</label>
-    <input type="text" class="form-control" name="codigo" required>
+    <input type="text" class="form-control" name="codigoBarra" required>
   </div>
   <div class="col-12">
     <label for="inputAddress2" class="form-label">Fornecedor</label>
