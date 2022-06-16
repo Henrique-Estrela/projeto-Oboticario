@@ -11,7 +11,15 @@
         case 'cadProduto':
             include "views/cadProduto.php";
             break;
-        
+
+        case 'ConsultarE':
+            include "views/ConsultarE.php";
+            break;
+
+        case 'ControleV':
+            include "views/ControleV.php";
+            break;
+            
         default:
             include "views/home.php";
         break;

@@ -1,6 +1,3 @@
-<?php include "head.php"; ?>
-<?php include "menu.php"; ?>
-
 <section id="listar_clientes">
   <div class="container-fluid">
     <div class="row">
@@ -56,6 +53,3 @@
   </div>
 
 </section>
-
-<?php include "js.php"; ?>
-<?php include "footer.php"; ?>
