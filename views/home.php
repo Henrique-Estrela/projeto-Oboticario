@@ -47,7 +47,7 @@
         <footer>
             <div class="row">
                 <div class="col-sm-4 justify-content-center align-self-center">
-                    <img src="_img/logo.png" class="logo">
+                    <img src="_image/logo.png" width="50rem" class="logo">
                 </div>
                 <div class="col-sm-4 justify-content-center text-center align-self-center">
                     Endereço

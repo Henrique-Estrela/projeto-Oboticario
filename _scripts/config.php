@@ -1,8 +1,8 @@
 <?php
-$servidor = 'www.devlsolutions.com.br';
+$servidor = 'www.phpmyadmin.net/';
 $usuario = 'devlso03_erik';
-$senha = 'senai@123';
-$banco = 'devlso03_eriksenai';
+$senha = '';
+$banco = 'projeto_senai';
 // Conecta-se ao banco de dados MySQL
 $mysqli = new mysqli($servidor, $usuario, $senha, $banco);
 // Caso algo tenha dado errado, exibe uma mensagem de erro

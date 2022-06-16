@@ -5,13 +5,13 @@
         include "_scripts/config.php";
 
         $nome = $dados['nome'];
-        $dt_nascimento = $dados['dt_nascimento'];
-        $nome_mae = $dados['nome_mae'];
-        $cpf = $dados['cpf'];
-        $bairro = $dados['bairro'];
-        $sexo = $dados['sexo'];
+        $dt_Cadastro = $dados['dt_Cadastro'];
+        $codigo = $dados['codigo'];
+        $fornecedor = $dados['fornecedor'];
+        $valor = $dados['valor'];
+        $custo = $dados['custo'];
 
-        $sql = "INSERT INTO cadaluno (aluno,mae,cpf,bairro,sexo,data_nascimento) VALUES ('$nome','$nome_mae','$cpf','$bairro','$sexo','$dt_nascimento')";
+        $sql = "INSERT INTO cadProduto (aluno,codigo,fornecedor,valor,custo,dt_Cadastro) VALUES ('$nome','$codigo','$fornecedor','$valor','$custo','$dt_Cadastro')";
         $query = $mysqli->query($sql);
 
         return $query;

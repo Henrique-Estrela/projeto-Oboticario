@@ -28,16 +28,18 @@
         <tbory  id="caixa">
           <?php 
             include "_scripts/config.php";
-            $sql = "SELECT * FROM contato";
+            $sql = "SELECT * FROM devlso03_eriksenai";
             $query = $mysqli ->query($sql);
             while ($dados = $query ->fetch_array()){
 
           ?>
           <tr>
             <td style="text-align:center"><?php echo $dados ['id']; ?></td>
-            <td style="text-align:center"><?php echo $dados ['nome']; ?></td>
-            <td style="text-align:center"><?php echo $dados ['cpf']; ?></td>
-            <td style="text-align:center"><?php echo $dados ['rua']; ?></td>
+            <td style="text-align:center"><?php echo $dados ['data_venda']; ?></td>
+            <td style="text-align:center"><?php echo $dados ['qtde_comprada']; ?></td>
+            <td style="text-align:center"><?php echo $dados ['cod_produto']; ?></td>
+            <td style="text-align:center"><?php echo $dados ['valor_produto']; ?></td>
+            <td style="text-align:center"><?php echo $dados ['valor_venda']; ?></td>
             <td style="text-align:center">
               <a href="_scripts/">
                 <i class="fa-solid fa-file-pen"></i>
