@@ -18,11 +18,10 @@
                 return $query;
 
             }
-            //validação se ja foi 
 
-            // function cadastro_produto($nome){
+            // function cadastro_produto($codigoBarra){
             //     include "config.php";
-            //     $sql = "SELECT nome FROM cad_Produto WHERE nome='$nome'";
+            //     $sql = "SELECT codigoBarra FROM cad_Produto WHERE codigoBarra='$codigoBarra'";
             //     $query = $mysqli->query($sql);
             //     $total = mysqli_num_rows($query);
             //     return $total;
