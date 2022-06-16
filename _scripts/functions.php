@@ -26,7 +26,13 @@
             //     $total = mysqli_num_rows($query);
             //     return $total;
             // }  
+            
 
+            // function deletar($id){
+            //     $id = $id['id'];
+            //     $sql = "DELETE FROM cad_Produto WHERE id = $id";
+            //     return $id;
+            // }
         ?>
 
 
