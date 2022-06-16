@@ -1,3 +1,4 @@
+<?php include "_scripts/functions.php"?>
 <div class="container-fluid form-aluno">
 <form class="row g-3" method="post" action="">
   <div class="col-md-6">
@@ -30,4 +31,17 @@
   </div>
 </form>
 
+
+<?php
+
+    if(isset($_POST)){
+
+        if(cadastrar($_POST)){
+            echo "Deu bom!";
+        }else{
+            echo "Me lasquei";
+        };
+    }
+
+?>
 

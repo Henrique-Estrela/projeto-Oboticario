@@ -1,6 +1,6 @@
 <?php
-$servidor = 'www.phpmyadmin.net/';
-$usuario = 'devlso03_erik';
+$servidor = '127.0.0.1';
+$usuario = 'root';
 $senha = '';
 $banco = 'projeto_senai';
 // Conecta-se ao banco de dados MySQL
