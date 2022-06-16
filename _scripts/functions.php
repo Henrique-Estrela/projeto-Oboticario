@@ -12,7 +12,25 @@
                 $custo = $dados['custo'];
                 $qntd = $dados['qntd'];
 
-                $sql = "INSERT INTO cad_Produto (nome_produto,fornecedor,valor_venda,custo_produto,data_cadastro,codigo_barra,quantidade) VALUES ('$nome','$fornecedor','$valor','$custo','$dt_Cadastro','$codigoBarra',$qntd)";
+                $sql = "INSERT INTO cad_Produto (nome_produto,fornecedor,valor_venda,custo_produto,data_cadastro,codigo_barra,quantidade) VALUES ('$nome','$fornecedor','$valor','$custo','$dt_Cadastro','$codigoBarra','$qntd')";
+                $query = $mysqli->query($sql);
+
+                return $query;
+
+            }
+            
+            function cadastrar_venda($dados){
+
+                include "_scripts/config.php";
+
+                $dt_venda = $dados['dt_venda'];
+                $codigoBarraP = $dados['codigoBarraP'];
+                $qntdP = $dados['qntdP'];
+                $Produto = $dados['Valor_Produto'];
+                $venda = $dados['Valor_venda'];
+                
+
+                $sql = "INSERT INTO consulta_venda (data_venda,cod_produto,valor_venda,valor_produto,qtde_comprada)VALUES ('$dt_venda','$codigoBarraP','$qntdP','$Produto','$venda')";
                 $query = $mysqli->query($sql);
 
                 return $query;
