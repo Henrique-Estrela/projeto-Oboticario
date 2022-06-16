@@ -49,7 +49,7 @@
               </a>
             </td>
             <td style="text-align:center">
-              <a href="_scripts/deletar.php?id= .<?php echo $dados ['id']; ?>">
+              <a href="#<?php echo $dados['id']; ?>" method ="post">
                 <i class="fa-solid fa-trash-can"></i>
               </a>
             </td>
