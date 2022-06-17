@@ -1,12 +1,12 @@
 .circle{
-    width:50%;
+    margin-top: -10rem;
+    width:60%;
     height:70%;
     position: absolute;
     background:#3866f2;
     border-radius:0 0 100%  0;
 }
 .form{
-    
     background-color: #fff;
     margin: auto;
     margin-top: 10%;

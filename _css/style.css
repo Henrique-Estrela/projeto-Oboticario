@@ -47,6 +47,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .card{
+  border-radius: 1rem;
   background: linear-gradient(0deg, rgba(20,182,254,1) 0%, rgba(89,184,233,1) 100%);
   border:0px;
 }
@@ -54,6 +55,7 @@ body::-webkit-scrollbar-thumb {
 
 /*grafico*/
 .grafico{
+  border-radius: 2rem;
   margin-top: 20px;
   background: #fff;
 

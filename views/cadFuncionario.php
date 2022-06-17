@@ -17,12 +17,20 @@
     <input type="text" class="form-control" name="user" required>
   </div>
   <div class="col-md-6">
+      <label for="situacao" class="form-label">vc é:</label>
+      <select class="form-control caixa" name="situacao">
+        <option value="FUNCIONARIO">Funcionario</option>
+        <option value="ADM">Administrador</option>
+      </select>
+  </div>
+  <div class="col-md-12">
     <label class="form-label">Senha</label>
     <input type="text" class="form-control" name="senha" required>
   </div>
   <div class="col-12">
     <button type="submit" class="btn btn-primary">Salvar</button>
   </div>
+  
 </form>
 <?php
 include "_scripts/functions.php";

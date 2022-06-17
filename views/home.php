@@ -4,31 +4,31 @@
             <?php 
                 include "_scripts/config.php";
                 
-                $sql = "SELECT * FROM dados_user order by id  desc";
+                $sql = "SELECT count(id) as t FROM dados_user";
                 $query = $mysqli ->query($sql);
-                $dados = $query ->fetch_array()
+                $dados = $query ->fetch_array();
             ?>
 
             <?php 
                 include "_scripts/config.php";
 
-                $sql = "SELECT * FROM consulta_venda order by id  desc";
-                $query = $mysqli ->query($sql);
-                $dados1 = $query ->fetch_array()
+                /*$sql = "SELECT * FROM consulta_venda order by id  desc";
+                $query1 = $mysqli ->query($sql);
+                $dados1 = $query1->fetch_array()*/
             ?>
 
             <?php 
                 include "_scripts/config.php";
 
-                $sql = "SELECT * FROM cad_produto order by id  desc";
-                $query = $mysqli ->query($sql);
-                $dados2 = $query ->fetch_array()
+                /*$sql = "SELECT * FROM cad_produto order by id  desc";
+                $query2 = $mysqli->query($sql);
+                $dados2 = $query2 ->fetch_array()*/
             ?>
 
 
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title"><?php echo $dados ['id']; ?></h5>
+                        <h5 class="card-title"><?php echo $dados['t']; ?></h5>
                         <p class="card-text">Funcionarios</p>
                     </div>
                 </div>
