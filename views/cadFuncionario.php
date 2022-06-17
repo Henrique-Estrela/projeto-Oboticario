@@ -35,7 +35,7 @@
 <?php
 include "_scripts/functions.php";
 
-if(isset($_POST)){
+if(!empty($_POST['user'])){
 
   if(user($_POST)){
     ?>

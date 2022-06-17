@@ -50,6 +50,46 @@
                 return $query;
 
             }
+            function dados1(){
+                include "_scripts/config.php";
+                
+                $sql = "SELECT count(id) as t FROM dados_user";
+                $query = $mysqli ->query($sql);
+                $dados = $query ->fetch_array();
+                return $dados['t'];
+            }
+            function dados2(){
+                include "_scripts/config.php";
+                
+                $sql = "SELECT count(id) as t FROM consulta_venda";
+                $query1 = $mysqli ->query($sql);
+                $dados1 = $query1->fetch_array();
+                return $dados1['t'];
+            }
+            function dados3(){
+
+                include "_scripts/config.php";
+                
+                $sql = "SELECT count(id) as t FROM cad_produto";
+                $query2 = $mysqli->query($sql);
+                $dados2 = $query2 ->fetch_array();
+                return $dados2['t'];
+            }
+            function dados4(){
+
+                include "_scripts/config.php";
+                
+                $sql = "SELECT sum(valor_venda) as t FROM cad_produto";
+                $query3 = $mysqli->query($sql);
+                $dados3 = $query3 ->fetch_array();
+                return $dados3['t'];
+            }
+
+
+
+
+               
+
 
             // function cadastro_produto($codigoBarra){
             //     include "config.php";
@@ -67,5 +107,6 @@
             // }
         ?>
 
+           
 
     
