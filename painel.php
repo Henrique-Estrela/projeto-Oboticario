@@ -12,6 +12,10 @@
             include "views/cadProduto.php";
             break;
 
+        case 'cadFuncionario':
+            include "views/cadFuncionario.php";
+            break;
+
         case 'ConsultarE':
             include "views/ConsultarE.php";
             break;

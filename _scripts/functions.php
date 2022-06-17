@@ -36,6 +36,20 @@
                 return $query;
 
             }
+            function user($dados){
+
+                include "_scripts/config.php";
+
+                $user = $dados['user'];
+                $senha = $dados['senha'];
+                
+
+                $sql = "INSERT INTO dados_user (nome,tipo) VALUES ('$user','$senha')";
+                $query = $mysqli->query($sql);
+
+                return $query;
+
+            }
 
             // function cadastro_produto($codigoBarra){
             //     include "config.php";

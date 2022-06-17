@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="_css/style.css" type="text/css">
     <link rel="stylesheet" href="_css/form.css" type="text/css">
 
+    <link href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
     <link rel="stylesheet" type="text/css" href="/DataTables/datatables.css">

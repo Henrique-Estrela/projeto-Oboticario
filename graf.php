@@ -1,6 +1,8 @@
+
+
 <!-- Resources -->
 <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
-<script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
 <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
 
 <!-- Chart code -->
@@ -20,94 +22,39 @@ root.setThemes([
 
 
 // Create chart
-// https://www.amcharts.com/docs/v5/charts/xy-chart/
-var chart = root.container.children.push(am5xy.XYChart.new(root, {
-  panX: true,
-  panY: true,
-  wheelX: "panX",
-  wheelY: "zoomX",
-  pinchZoomX:true
-}));
-
-// Add cursor
-// https://www.amcharts.com/docs/v5/charts/xy-chart/cursor/
-var cursor = chart.set("cursor", am5xy.XYCursor.new(root, {}));
-cursor.lineY.set("visible", false);
-
-
-// Create axes
-// https://www.amcharts.com/docs/v5/charts/xy-chart/axes/
-var xRenderer = am5xy.AxisRendererX.new(root, { minGridDistance: 30 });
-xRenderer.labels.template.setAll({
-  rotation: -90,
-  centerY: am5.p50,
-  centerX: am5.p100,
-  paddingRight: 15
-});
-
-var xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
-  maxDeviation: 0.3,
-  categoryField: "country",
-  renderer: xRenderer,
-  tooltip: am5.Tooltip.new(root, {})
-}));
-
-var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
-  maxDeviation: 0.3,
-  renderer: am5xy.AxisRendererY.new(root, {})
+// https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/
+var chart = root.container.children.push(am5percent.PieChart.new(root, {
+  layout: root.verticalLayout
 }));
 
 
 // Create series
-// https://www.amcharts.com/docs/v5/charts/xy-chart/series/
-var series = chart.series.push(am5xy.ColumnSeries.new(root, {
-  name: "Series 1",
-  xAxis: xAxis,
-  yAxis: yAxis,
-  valueYField: "value",
-  sequencedInterpolation: true,
-  categoryXField: "country",
-  tooltip: am5.Tooltip.new(root, {
-    labelText:"{valueY}"
-  })
+// https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/#Series
+var series = chart.series.push(am5percent.PieSeries.new(root, {
+  valueField: "value",
+  categoryField: "category"
 }));
-
-series.columns.template.setAll({ cornerRadiusTL: 5, cornerRadiusTR: 5 });
-series.columns.template.adapters.add("fill", function(fill, target) {
-  return chart.get("colors").getIndex(series.columns.indexOf(target));
-});
-
-series.columns.template.adapters.add("stroke", function(stroke, target) {
-  return chart.get("colors").getIndex(series.columns.indexOf(target));
-});
 
 
 // Set data
-var data = [{
-  country: "Disciplina 1",
-  value: 8.2
-}, {
-  country: "Disciplina 2",
-  value: 4.1
-}, {
-  country: "Disciplina 3",
-  value: 9.6
-}, {
-  country: "Disciplina 4",
-  value: 7.2
-}, {
-  country: "Disciplina 5",
-  value: 5
-}];
-
-xAxis.data.setAll(data);
-series.data.setAll(data);
+// https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/#Setting_data
+series.data.setAll([
+  { value: 2, category: "One" },
+  { value: 9, category: "Two" },
+  { value: 6, category: "Three" },
+  { value: 5, category: "Four" },
+  { value: 4, category: "Five" },
+  { value: 3, category: "Six" },
+  { value: 1, category: "Seven" },
+  { value: 1, category: "eight" },
+  { value: 1, category: "nine" },
+  { value: 1, category: "ten" },
+]);
 
 
-// Make stuff animate on load
-// https://www.amcharts.com/docs/v5/concepts/animations/
-series.appear(1000);
-chart.appear(1000, 100);
+// Play initial series animation
+// https://www.amcharts.com/docs/v5/concepts/animations/#Animation_of_series
+series.appear(1000, 100);
 
 }); // end am5.ready()
 </script>

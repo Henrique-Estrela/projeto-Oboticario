@@ -17,7 +17,7 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="painel.php?r=cadProduto">Cadastrar Produto</a></li>
-                            <li><a class="dropdown-item" href="#">Cadastrar Funcionario</a></li>
+                            <li><a class="dropdown-item" href="painel.php?r=cadFuncionario">Cadastrar Funcionario</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">

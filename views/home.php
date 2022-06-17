@@ -1,41 +1,68 @@
 <div class="container-fluid">        
         <div class="row cards-intro">
             <div class="col-sm-3">
+            <?php 
+                include "_scripts/config.php";
+                
+                $sql = "SELECT * FROM dados_user order by id  desc";
+                $query = $mysqli ->query($sql);
+                $dados = $query ->fetch_array()
+            ?>
+
+            <?php 
+                include "_scripts/config.php";
+
+                $sql = "SELECT * FROM consulta_venda order by id  desc";
+                $query = $mysqli ->query($sql);
+                $dados1 = $query ->fetch_array()
+            ?>
+
+            <?php 
+                include "_scripts/config.php";
+
+                $sql = "SELECT * FROM cad_produto order by id  desc";
+                $query = $mysqli ->query($sql);
+                $dados2 = $query ->fetch_array()
+            ?>
+
+
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">0</h5>
-                        <p class="card-text">Total de Alunos</p>
+                        <h5 class="card-title"><?php echo $dados ['id']; ?></h5>
+                        <p class="card-text">Funcionarios</p>
                     </div>
                 </div>
             </div>
             <div class="col-sm-3">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">0</h5>
-                        <p class="card-text">Total de Alunos</p>
+                        <h5 class="card-title"><?php echo $dados1 ['id']; ?></h5>
+                        <p class="card-text">vendas</p>
                     </div>
                 </div>
             </div>
             <div class="col-sm-3">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">0</h5>
-                        <p class="card-text">Total de Alunos</p>
+                        <h5 class="card-title"><?php echo $dados2 ['id']; ?></h5>
+                        <p class="card-text">produtos cadastrados</p>
                     </div>
                 </div>
             </div>
             <div class="col-sm-3">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">0</h5>
-                        <p class="card-text">Total de Alunos</p>
+                        <h5 class="card-title"><?php echo $dados1 ['valor_venda']; ?></h5>
+                        <p class="card-text">Vendidos</p>
                     </div>
                 </div>
             </div>
+            
         </div>        
     </div>
     
     <div class="container grafico">
+        <h1>Mais vendidos</h1>
         <div class="grafico">
             <div id="chartdiv">
                 <?php include "graf.php"; ?>
