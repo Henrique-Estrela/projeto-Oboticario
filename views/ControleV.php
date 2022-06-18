@@ -96,8 +96,6 @@ if(cadastrar_venda($_POST)){
             <th style="text-align:center">Codigo</th>
             <th style="text-align:center">Valor Produto</th>
             <th style="text-align:center">Valor venda</th>
-            <th style="text-align:center">#</th>
-            <th style="text-align:center">#</th>
           </tr>
         </thead>
         <tbory  id="caixa">
@@ -115,16 +113,6 @@ if(cadastrar_venda($_POST)){
             <td style="text-align:center"><?php echo $dados ['cod_produto']; ?></td>
             <td style="text-align:center"><?php echo $dados ['valor_produto']; ?></td>
             <td style="text-align:center"><?php echo $dados ['valor_venda']; ?></td>
-            <td style="text-align:center">
-              <a href="_scripts/">
-                <i class="fa-solid fa-file-pen"></i>
-              </a>
-            </td>
-            <td style="text-align:center">
-              <a href="_scripts/deletar.php?id= .<?php echo $dados ['id']; ?>">
-                <i class="fa-solid fa-trash-can"></i>
-              </a>
-            </td>
           </tr>
           <?php } ?>
         </tbory>
