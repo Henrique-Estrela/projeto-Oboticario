@@ -7,7 +7,7 @@
       </div>
     </div>
   </div>
-
+  <h1>Consulta de Estoque</h1>
   <div class="container-fluid">
     <div class="row">
       <table class="table" id="mytable">

@@ -12,6 +12,7 @@
 
 
 <div class="container-fluid form-aluno">
+<h1>Controle de Vendas</h1>
 <form class="row g-3" method="post" action="">
   <div class="col-md-6">
     <label  class="form-label">Nome do Produto</label>
