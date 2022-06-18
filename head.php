@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
     <link rel="stylesheet" type="text/css" href="/DataTables/datatables.css">
+
+    <link rel="stylesheet" href="sweetalert2.min.css">
     <script type="text/javascript" charset="utf8" src="/DataTables/datatables.js"></script>
 
         <!-- Bootstrap CSS -->

@@ -1,13 +1,12 @@
-function deletar(event) {
+function deletar($id) {
   
-const swalWithBootstrapButtons = Swal.mixin({
+    const swalWithBootstrapButtons = Swal.mixin({
     customClass: {
       confirmButton: 'btn btn-success',
       cancelButton: 'btn btn-danger'
     },
     buttonsStyling: false
   })
-  
   swalWithBootstrapButtons.fire({
     title: 'Are you sure?',
     text: "You won't be able to revert this!",
@@ -18,9 +17,10 @@ const swalWithBootstrapButtons = Swal.mixin({
     reverseButtons: true
   }).then((result) => {
     if (result.isConfirmed) {
+        
       swalWithBootstrapButtons.fire(
-        'Deleted!',
-        'Your file has been deleted.',
+        'Deletado!',
+        'Seu produto foi deletado com sucesso!',
         'success'
       )
     } else if (
@@ -28,12 +28,10 @@ const swalWithBootstrapButtons = Swal.mixin({
       result.dismiss === Swal.DismissReason.cancel
     ) {
       swalWithBootstrapButtons.fire(
-        'Cancelled',
-        'Your imaginary file is safe :)',
+        'Cancelado',
+        'venda não apagada :)',
         'error'
       )
     }
   })
 }
-
-

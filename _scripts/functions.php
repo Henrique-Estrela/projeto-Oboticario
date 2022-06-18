@@ -111,9 +111,9 @@
                 $sql = "UPDATE cad_Produto SET nome_produto='$nome', data_cadastro='$dt_Cadastro', fornecedor='$fornecedor', custo_produto='$custo', valor_venda='$valor', quantidade='$qntd', codigo_barra='$codigoBarra' WHERE id=$id";
                 $query = $mysqli->query($sql);
             }
-        
+            ?>
+            <?php 
                
-
 
             // function cadastro_produto($codigoBarra){
             //     include "config.php";
@@ -122,21 +122,16 @@
             //     $total = mysqli_num_rows($query);
             //     return $total;
             // }  
+
+        
+            function deletar($id) {
+                include '_scripts/config.php';
+                $id = $id['id'];
+                $sql = "DELETE FROM cad_Produto WHERE id = $id";
+                return $id;
             
-
-            // function deletar($id){
-            //     $id = $id['id'];
-            //     $sql = "DELETE FROM cad_Produto WHERE id = $id";
-            //     return $id;
-            // }
-
-
-
-
-
-            
-        ?>
+            }?>
 
            
 
-    
+     

@@ -44,12 +44,12 @@
             <td style="text-align:center"><?php echo $dados ['custo_produto']; ?></td>
             <td style="text-align:center"><?php echo $dados ['data_cadastro']; ?></td>
             <td style="text-align:center">
-              <a href="_scripts/">
+              <a href="_scripts/" onclick="">
                 <i class="fa-solid fa-file-pen"></i>
               </a>
             </td>
             <td style="text-align:center">
-              <a href="#<?php echo $dados['id']; ?>" method ="post">
+              <a href="#<?php echo $dados['id']; ?>" method ="post" onclick="deletar(event)">
                 <i class="fa-solid fa-trash-can"></i>
               </a>
             </td>
