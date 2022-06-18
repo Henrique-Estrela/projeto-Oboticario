@@ -53,27 +53,27 @@
             function dados1(){
                 include "_scripts/config.php";
                 
-                $sql = "SELECT count(id) as t FROM dados_user";
+                $sql = "SELECT id FROM dados_user";
                 $query = $mysqli ->query($sql);
-                $dados = $query ->fetch_array();
-                return $dados['t'];
+                $dados = $query ->num_rows;
+                return $dados;
             }
             function dados2(){
                 include "_scripts/config.php";
                 
-                $sql = "SELECT count(id) as t FROM consulta_venda";
+                $sql = "SELECT id FROM consulta_venda";
                 $query1 = $mysqli ->query($sql);
-                $dados1 = $query1->fetch_array();
-                return $dados1['t'];
+                $dados1 = $query1->num_rows;
+                return $dados1;
             }
             function dados3(){
 
                 include "_scripts/config.php";
                 
-                $sql = "SELECT count(id) as t FROM cad_produto";
+                $sql = "SELECT id FROM cad_produto";
                 $query2 = $mysqli->query($sql);
-                $dados2 = $query2 ->fetch_array();
-                return $dados2['t'];
+                $dados2 = $query2 ->num_rows;
+                return $dados2;
             }
             function dados4(){
 
@@ -85,6 +85,13 @@
                 return $dados3['t'];
             }
 
+            function listarDisciplina(){
+                include "_scripts/config.php";
+                $sql = "SELECT * FROM cad_produto WHERE status = 'A'";
+                $query = $mysqli ->query($sql);
+            
+                return $query;
+            }
 
 
 

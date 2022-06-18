@@ -33,12 +33,8 @@
     <label for="inputAddress2" class="form-label">Valor Produto</label>
     <input type="number" class="form-control" name="Valor_Produto" required>
   </div>
-  <div class="col-md-6">
-    <label class="form-label">Valor venda</label>
-    <input type="number" class="form-control" name="Valor_venda" required>
-  </div>
   <div class="col-12">
-    <button type="submit" class="btn btn-primary">Salvar</button>
+    <button type="submit" class="btn btn-primary">Vender</button>
   </div>
 </form>
 </div>
