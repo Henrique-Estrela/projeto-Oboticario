@@ -17,8 +17,8 @@
     <input type="text" class="form-control" name="user" required>
   </div>
   <div class="col-md-6">
-      <label for="situacao" class="form-label">vc é:</label>
-      <select class="form-control caixa" name="situacao">
+      <label for="tipo" class="form-label">Cargo:</label>
+      <select class="form-control caixa" name="tipo">
         <option value="FUNCIONARIO">Funcionario</option>
         <option value="ADM">Administrador</option>
       </select>

@@ -42,9 +42,10 @@
 
                 $user = $dados['user'];
                 $senha = $dados['senha'];
+                $tipo = $dados['tipo'];
                 
 
-                $sql = "INSERT INTO dados_user (nome,tipo) VALUES ('$user','$senha')";
+                $sql = "INSERT INTO dados_user (nome,senha,tipo) VALUES ('$user','$senha','$tipo')";
                 $query = $mysqli->query($sql);
 
                 return $query;
@@ -84,7 +85,7 @@
                 $dados3 = $query3 ->fetch_array();
                 return $dados3['t'];
             }
-
+            //mexer aqui
             function listarDisciplina(){
                 include "_scripts/config.php";
                 $sql = "SELECT * FROM cad_produto WHERE status = 'A'";
@@ -93,7 +94,7 @@
                 return $query;
             }
 
-
+            //verificar se funciona
             function editar($dados){
 
                 include "_scripts/config.php";
@@ -110,6 +111,7 @@
                 $sql = "UPDATE cad_Produto SET nome_produto='$nome', data_cadastro='$dt_Cadastro', fornecedor='$fornecedor', custo_produto='$custo', valor_venda='$valor', quantidade='$qntd', codigo_barra='$codigoBarra' WHERE id=$id";
                 $query = $mysqli->query($sql);
             }
+        
                
 
 
