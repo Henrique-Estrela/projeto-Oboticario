@@ -127,6 +127,12 @@
             //     $sql = "DELETE FROM cad_Produto WHERE id = $id";
             //     return $id;
             // }
+
+
+
+
+
+            
         ?>
 
            
