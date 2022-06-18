@@ -1,3 +1,5 @@
+function deletar(event) {
+    
 const swalWithBootstrapButtons = Swal.mixin({
     customClass: {
       confirmButton: 'btn btn-success',
@@ -32,3 +34,4 @@ const swalWithBootstrapButtons = Swal.mixin({
       )
     }
   })
+}
