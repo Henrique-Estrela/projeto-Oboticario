@@ -49,7 +49,7 @@
               </a>
             </td>
             <td style="text-align:center">
-              <a href="#<?php echo $dados['id']; ?>" method ="post" onclick="deletar(event)">
+              <a href=#<?php echo $dados['id']; ?>" method ="post" onclick="delete('id')">
                 <i class="fa-solid fa-trash-can"></i>
               </a>
             </td>

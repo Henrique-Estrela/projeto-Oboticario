@@ -98,18 +98,9 @@
             function editar($dados){
 
                 include "_scripts/config.php";
-
-                $id = $dados['id'];
-                $nome = $dados['nome'];
-                $dt_Cadastro = $dados['dt_Cadastro'];
-                $fornecedor = $dados['fornecedor'];
-                $codigoBarra = $dados['codigoBarra'];
-                $valor = $dados['valor'];
-                $custo = $dados['custo'];
-                $qntd = $dados['qntd'];
-
-                $sql = "UPDATE cad_Produto SET nome_produto='$nome', data_cadastro='$dt_Cadastro', fornecedor='$fornecedor', custo_produto='$custo', valor_venda='$valor', quantidade='$qntd', codigo_barra='$codigoBarra' WHERE id=$id";
-                $query = $mysqli->query($sql);
+                $edit_cad = "UPDATE cad_produto SET nome_produto = '$nome' WHERE id= 19";
+                $resultado = mysqli_query($mysqli, $edit_cad);
+                $resultado
             }
             ?>
             <?php 
@@ -124,13 +115,14 @@
             // }  
 
         
-            function deletar($id) {
-                include '_scripts/config.php';
-                $id = $id['id'];
-                $sql = "DELETE FROM cad_Produto WHERE id = $id";
-                return $id;
+            // function delete($id) {
+            //     include '_scripts/config.php';
+            //     $id = $id['id'];
+            //     $sql = "DELETE FROM cad_Produto WHERE id = $id";
+            //     mysqli_query($mysqli,$sql);
+            //     return $id;
             
-            }?>
+            //} ?>
 
            
 
