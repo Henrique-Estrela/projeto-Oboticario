@@ -44,7 +44,7 @@
             <td style="text-align:center"><?php echo $dados ['custo_produto']; ?></td>
             <td style="text-align:center"><?php echo $dados ['data_cadastro']; ?></td>
             <td style="text-align:center">
-              <a href="_scripts/" onclick="">
+              <a href="views/edicao.php" onclick="">
                 <i class="fa-solid fa-file-pen"></i>
               </a>
             </td>
