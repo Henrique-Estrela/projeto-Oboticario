@@ -102,8 +102,6 @@
                 $resultado = mysqli_query($mysqli, $edit_cad);
                 $resultado
             }
-            ?>
-            <?php 
                
 
             // function cadastro_produto($codigoBarra){
