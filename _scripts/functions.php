@@ -111,8 +111,50 @@
                 $sql = "UPDATE cad_Produto SET nome_produto='$nome', data_cadastro='$dt_Cadastro', fornecedor='$fornecedor', custo_produto='$custo', valor_venda='$valor', quantidade='$qntd', codigo_barra='$codigoBarra' WHERE id=$id";
                 $query = $mysqli->query($sql);
             }
-            ?>
-            <?php 
+             
+            function deletar() {
+                include 'js.php';
+                include 'head.php';
+                return ?>
+                 <script>
+                    const swalWithBootstrapButtons = Swal.mixin({
+                customClass: {
+                  confirmButton: 'btn btn-success',
+                  cancelButton: 'btn btn-danger'
+                },
+                buttonsStyling: false
+              })
+              swalWithBootstrapButtons.fire({
+                title: 'Are you sure?',
+                text: "You won't be able to revert this!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Yes, delete it!',
+                cancelButtonText: 'No, cancel!',
+                reverseButtons: true
+              }).then((result) => {
+                if (result.isConfirmed) {
+                    
+                  swalWithBootstrapButtons.fire(
+                    'Deletado!',
+                    'Seu produto foi deletado com sucesso!',
+                    'success'
+                  )
+                } else if (
+                  /* Read more about handling dismissals below */
+                  result.dismiss === Swal.DismissReason.cancel
+                ) {
+                  swalWithBootstrapButtons.fire(
+                    'Cancelado',
+                    'venda não apagada :)',
+                    'error'
+                  )
+                }
+              })
+                </script><?php ;
+                include 'footer.php';
+                
+            }
                
 
             // function cadastro_produto($codigoBarra){
@@ -124,7 +166,7 @@
             // }  
 
         
-            function deletar($id) {
+            function deletarban($id) {
                 include '_scripts/config.php';
                 $id = $id['id'];
                 $sql = "DELETE FROM cad_Produto WHERE id = $id";
