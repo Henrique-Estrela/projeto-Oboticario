@@ -8,12 +8,12 @@ function deletar($id) {
     buttonsStyling: false
   })
   swalWithBootstrapButtons.fire({
-    title: 'Are you sure?',
-    text: "You won't be able to revert this!",
+    title: 'Você quer mesmo apagar esse registro?',
+    text: "tem certeza?",
     icon: 'warning',
     showCancelButton: true,
-    confirmButtonText: 'Yes, delete it!',
-    cancelButtonText: 'No, cancel!',
+    confirmButtonText: 'sim, pode deletar!',
+    cancelButtonText: 'Não, cancele!',
     reverseButtons: true
   }).then((result) => {
     if (result.isConfirmed) {
