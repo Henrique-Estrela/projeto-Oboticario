@@ -95,13 +95,7 @@
             }
 
             //verificar se funciona
-            function editar($dados){
-
-                include "_scripts/config.php";
-                $edit_cad = "UPDATE cad_produto SET nome_produto = '$nome' WHERE id= 19";
-                $resultado = mysqli_query($mysqli, $edit_cad);
-                $resultado
-            }
+   
                
 
             // function cadastro_produto($codigoBarra){
@@ -113,14 +107,14 @@
             // }  
 
         
-            // function delete($id) {
-            //     include '_scripts/config.php';
-            //     $id = $id['id'];
-            //     $sql = "DELETE FROM cad_Produto WHERE id = $id";
-            //     mysqli_query($mysqli,$sql);
-            //     return $id;
+             function delete($id) {
+                include '_scripts/config.php';
+                 $id = $id['id'];
+                 $sql = "DELETE FROM cad_Produto WHERE id = $id";
+                 mysqli_query($mysqli,$sql);
+                 return $id;
             
-            //} ?>
+            } ?>
 
            
 

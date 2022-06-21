@@ -1,7 +1,7 @@
 <?php include 'head.php' ?>
 <div class="circle"></div>
 <div class="cube"></div>
-  <form class="form left_hover" id="login1" action="">
+  <form class="form left_hover" id="login1" action="testelogin.php">
       <h2 class="form__title">Login</h2>
       <div class="form__container">
           <div class="form__group">

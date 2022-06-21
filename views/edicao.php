@@ -12,7 +12,10 @@
 
 <div class="container-fluid form-aluno">
 <h1>Editar Produto</h1>
-<form class="row g-3" method="post" action="">
+<form class="row g-3" method="POST" action="../_scripts/update.php">
+  <?php $id = $_GET['id'] ;
+ ?>
+  <input type="text" name='id' value="<?php echo $id; ?>">
   <div class="col-md-6">
     <label  class="form-label">Nome do Produto</label>
     <input type="text" class="form-control" name="nome" required>
@@ -42,7 +45,7 @@
   </div>
 </form>
 <?php
-include "_scripts/functions.php";
+include "../_scripts/functions.php";
 
 if(!empty($_POST['valor'])){
 
@@ -91,6 +94,9 @@ if(!empty($_POST['valor'])){
     }
     })
   
+  function  updatedados(id, number){
+console.log(id,number)
+    }
   </script>
      <?php 
   };
