@@ -1,3 +1,14 @@
+<?php 
+
+session_start();
+if(!isset($_SESSION['id'])){
+    header("location: index.php");
+}
+
+?>
+
+
+
 <div class="container-fluid">        
         <div class="row cards-intro">
             <div class="col-sm-3">
