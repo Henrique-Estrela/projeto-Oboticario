@@ -32,6 +32,7 @@ include "protect.php";
             include "views/home.php";
         break;
         
+        
 
     }
     

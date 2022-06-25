@@ -82,7 +82,7 @@ include "protect.php";
               </a>
             </td>
             <td style="text-align:center">
-             <a> <button onclick="deletardados(<?php echo $dados['id']; ?>)">   
+             <a> <button id="lixeira" onclick="deletardados(<?php echo $dados['id']; ?>)">   
                 <i class="fa-solid fa-trash-can"></i>
                 </button> </a>
             </td>
