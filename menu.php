@@ -27,7 +27,7 @@
                         <a class="nav-link" href="painel.php?r=ConsultarE">Consutar Estoque</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Sair</a>
+                        <a class="nav-link" href="index.php" tabindex="-1" aria-disabled="true">Sair</a>
                     </li>
                 </ul>
             </div>

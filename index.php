@@ -1,10 +1,42 @@
 <?php
-require_once '_scripts/verification.php';
-$user = new usuarios();
-define('host_name', 'localhost');
-define('host_user', 'root');
-define('host_pwd', "").
-define('db_name', 'dados_user');
+include('conexao.php');
+
+if(isset($_POST['user']) || isset($_POST['senha'])) {
+
+    if(strlen($_POST['user']) == 0) {
+        echo "Preencha seu e-mail";
+    } else if(strlen($_POST['senha']) == 0) {
+        echo "Preencha sua senha";
+    } else {
+
+        $email = $mysqli->real_escape_string($_POST['user']);
+        $senha = $mysqli->real_escape_string($_POST['senha']);
+
+        $sql_code = "SELECT * FROM dados_user WHERE nome = '$email' AND senha = '$senha'";
+        $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código SQL: " . $mysqli->error);
+
+        $quantidade = $sql_query->num_rows;
+
+        if($quantidade == 1) {
+            
+            $usuario = $sql_query->fetch_assoc();
+
+            if(!isset($_SESSION)) {
+                session_start();
+            }
+
+            $_SESSION['id'] = $usuario['id'];
+            $_SESSION['nome'] = $usuario['nome'];
+
+            header("Location: painel.php?r=home");
+
+        } else {
+            echo "Falha ao logar! E-mail ou senha incorretos";
+        }
+
+    }
+
+}
 ?>
 
 <html lang="pt-br">
@@ -17,7 +49,7 @@ define('db_name', 'dados_user');
 </head>
 <body>
 <div class="circle"></div>
-  <form class="form left_hover" id="login1">
+  <form class="form left_hover" method="POST" id="login1">
       <h2 class="form__title">Login</h2>
       <div class="form__container">
           <div class="form__group">
@@ -41,38 +73,5 @@ define('db_name', 'dados_user');
       
   </form>
 
-    <?php
-    if(isset($_POST['user']))
-    {
-    $nome = addslashes($_POST['user']);
-    $senha = addslashes($_POST['senha']);
-
-    if (!empty($nome) && !empty($senha)) {
-        $user -> conectar('db_name', 'host_name', 'host_user', 'host_pwd');
-        if ($user -> msgErro == ""){
-            if($user -> logar($email, $senha)){
-                header("location: home.php");
-            } else {
-                ?>
-                <div class="msg-erro"> Email ou Senha não conferem </div>
-            <?php
-            }
-        } else {
-            ?>
-            <div class="msg-erro">
-                <?php
-                echo "ERRO: " . $user -> msgErro;
-                ?>
-            </div>
-        <?php
-        }
-
-    }else {
-        ?>
-        <div class="msg-erro"> Por gentileza. Preencha os dois campos </div>
-    <?php
-        }
-    }
-    ?>
 </body>
 </html>
