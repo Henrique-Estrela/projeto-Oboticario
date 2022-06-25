@@ -1,11 +1,11 @@
 <?php 
 
-if(!isset($_SESSION)) {
-  session_start();
-}
-if(!isset($_SESSION['id'])){
-    header("location: ../index.php");
-}
+  if(!isset($_SESSION)) {
+    session_start();
+  }
+  if(!isset($_SESSION['id'])){
+      header("location: ../index.php");
+  }
 
 ?>
 
@@ -14,18 +14,16 @@ if(!isset($_SESSION['id'])){
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="_CSS/style.css" type="text/css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
 </head>
 <body>
   
-
 <div class="container-fluid form-aluno">
 <h1>Editar Produto</h1>
 <form class="row g-3" method="POST" action="../_scripts/update.php">
-  <?php $id = $_GET['id'] ;
- ?>
+  <?php $id = $_GET['id']; ?>
   <input type="text" name='id' value="<?php echo $id; ?>">
   <div class="col-md-6">
     <label  class="form-label">Nome do Produto</label>
@@ -39,7 +37,7 @@ if(!isset($_SESSION['id'])){
     <label class="form-label">Quantidade</label>
     <input type="number" class="form-control" name="qntd" required>
   </div>
-  <div class="col-12">
+  <div class="col-6">
     <label for="inputAddress2" class="form-label">Fornecedor</label>
     <input type="text" class="form-control" name="fornecedor" required>
   </div>
@@ -55,12 +53,13 @@ if(!isset($_SESSION['id'])){
     <button type="submit" class="btn btn-primary">Salvar</button>
   </div>
 </form>
+</div>
 <?php
 include "../_scripts/functions.php";
 
 if(!empty($_POST['valor'])){
 
-  if(editar($_POST)){
+  if(($_POST)){
     ?>
     <script language='javascript'>
     Swal.fire({

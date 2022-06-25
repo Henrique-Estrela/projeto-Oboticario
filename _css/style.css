@@ -23,7 +23,6 @@ body::-webkit-scrollbar-thumb {
   border-radius: 20px;
 }
 
-
 /*CARDS*/
 
 .card-title, .card-text{
@@ -54,6 +53,7 @@ body::-webkit-scrollbar-thumb {
 
 
 /*grafico*/
+
 .grafico{
   border-radius: 2rem;
   margin-top: 20px;
@@ -84,6 +84,7 @@ footer{
 
 }
 
+/* tabela de dados */
 
 .dataTables_paginate {
   color: rgb(29, 79, 195);
