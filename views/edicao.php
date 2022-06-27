@@ -30,10 +30,7 @@
   
   </div>
 
-  <div class="col-md-6">
-    <?php $id = $_GET['id']; ?>
-  <input type="text" name='id' value="<?php echo $id; ?>">
-  </div>
+
   
   <form class="row g-3" method="POST" action="../_scripts/update.php">
 
