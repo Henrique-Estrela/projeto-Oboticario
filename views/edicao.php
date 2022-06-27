@@ -62,7 +62,9 @@
       <button type="submit" class="btn btn-primary">Salvar</button>
     </div>
   </form>
+  <input type="button" id="voltar" class="btn btn-primary"  value="Voltar" onclick="history.go(-1)">
 </div>
+
 <?php
 include "../_scripts/functions.php";
 
