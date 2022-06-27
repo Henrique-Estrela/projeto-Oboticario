@@ -46,8 +46,7 @@ include "protect.php";
 </div>
 
 <?php include "_scripts/functions.php"; 
-
-if(!empty($_POST['qntdP'])){
+if(!empty($_POST['user'])){
 
 if(cadastrar_venda($_POST)){
   ?>

@@ -30,7 +30,7 @@
                 $venda = $dados['Valor_venda'];
                 
 
-                $sql = "INSERT INTO consulta_venda (data_venda,cod_produto,valor_venda,valor_produto,qtde_comprada)VALUES ('$dt_venda','$codigoBarraP','$qntdP','$Produto','$venda')";
+                $sql = "INSERT INTO consulta_venda (data_venda,cod_produto,valor_venda,valor_produto,qtde_comprada) VALUES ('$dt_venda','$codigoBarraP','$venda','$Produto','$qntdP')";
                 $query = $mysqli->query($sql);
 
                 return $query;

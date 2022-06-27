@@ -67,6 +67,8 @@
 include "../_scripts/functions.php";
 
 if(!empty($_POST['valor'])){
+
+  
     ?>
     <script language='javascript'>
     Swal.fire({

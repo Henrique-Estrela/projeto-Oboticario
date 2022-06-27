@@ -3,30 +3,7 @@ include "protect.php";
 ?>
 
 <section id="listar_clientes">
-<script>
-  function deletardados(id) {
-    var id = id
 
-
-    $.ajax({
-            url: "http://localhost/GitHub/projeto-Oboticario/_scripts/delete.php",
-            type: "POST",
-            data: {
-                id: id
-            },
-        })
-        .done(function(result) {
-                console.log(result);
-                $("#resultadocompleto").html(result);
-            }
-
-        )
-        .fail(function(msg) {
-            alert(msg);
-        })
-
-};
-</script>
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-12">
@@ -49,8 +26,7 @@ include "protect.php";
             <th style="text-align:center">Valor de Venda</th>
             <th style="text-align:center">Valor de Custo</th>
             <th style="text-align:center">Data de Cadastro</th>
-            <th style="text-align:center">Editar</th>
-            <th style="text-align:center">Apagar</th>
+           
 
           </tr>
         </thead>
@@ -71,17 +47,7 @@ include "protect.php";
             <td style="text-align:center"><?php echo $dados ['valor_venda']; ?></td>
             <td style="text-align:center"><?php echo $dados ['custo_produto']; ?></td>
             <td style="text-align:center"><?php echo $dados ['data_cadastro']; ?></td>
-            <td style="text-align:center">
-              <a href="views/edicao.php?id=<?php echo $dados['id'] ?>" onclick="">
-                <i class="fa-solid fa-file-pen"></i>
-              </a>
-            </td>
-            <td style="text-align:center">
-             <a> <button id="lixeira" onclick="history.go(0), deletardados(<?php echo $dados['id'];?> )">   
-          
-                <i class="fa-solid fa-trash-can"></i>
-                </button> </a>
-            </td>
+            
           </tr>
           <?php } ?>
         </tbory>
